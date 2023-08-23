@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
+:root{
+    --primaryfont: 'Poppins', sans-serif;
+    --secondaryfont: 'PT Sans', sans-serif;
+    --primarycolor: #353535;
+    --secondarycolor: #FFCC00;
+}
+/* COMMON CSS STARTS HERE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    width: 1110px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.center{
+    align-items: center;
+}
+body{
+    font-family: var(--primaryfont);
+}
+/* COMMON CSS ENDS HERE */
+
+/* NAV STARTS HERE */
+nav .logo{
+    width: 30%;
+}
+nav .menu{
+    width: 70%;
+    text-align: right;
+}
+nav .menu ul li{
+    display: inline-block;
+    position: relative;
+}
+nav .menu ul li a{
+    display: inline-block;
+    color: var(--primarycolor);
+font-size: 15px;
+font-weight: 500;
+line-height: 200%; /* 30px */
+padding: 18px 22px 5px 22px;
+text-transform: uppercase;
+}
+nav .menu ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: var(--primarycolor);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 500ms;
+}
+nav .menu ul li:hover a::before{
+    width: 100%;
+    opacity: 1;
+}
+nav .menu ul li .underline::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primarycolor);
+    bottom: 0;
+    left: 0;
+}
+/* NAV ENDS HERE */
+
+/* BANNER STARTS HERE */
+#banner .container{
+    background-image: url(./Images/banner.png);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    margin-top: 60px;
+    margin-bottom: 103px;
+}
+#banner h1{
+    color: #FFF;
+font-family: PT Sans;
+font-size: 46px;
+font-weight: 700;
+line-height: normal;
+text-align: center;
+}
+#banner p{
+    color: #FFF;
+text-align: center;
+font-size: 18px;
+font-weight: 600;
+line-height: 190%; /* 34.2px */
+}
+/* BANNER ENDS HERE */
+
+
+/* FORM STARTS HERE */
+#input{
+    margin-bottom: 119px;
+}
+#input .for_icons{
+    width: 42%;
+}
+.for_icons .icon{
+    width: 20%;
+    margin-bottom: 38px;
+}
+.for_icons .icon span{
+    width: 70px;
+    height: 70px;
+    background-color: #FFEBDC;
+    color: #F16500;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 28px;
+    text-align: center;
+    line-height: 70px;
+}
+.for_icons .text{
+    width: 80%;
+    margin-bottom: 38px;
+}
+.for_icons .text h4{
+    color: var(--primarycolor);
+font-size: 24px;
+font-weight: 500;
+line-height: 190%; /* 45.6px */
+}
+.for_icons .text p{
+    color: #7A7A7A;
+font-size: 17px;
+font-weight: 400;
+line-height: 190%; /* 32.3px */
+}
+.for_icons .icon .mail{
+    width: 70px;
+    height: 70px;
+    background-color: #F0FFE4;
+    color: #55852F;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 28px;
+    text-align: center;
+    line-height: 70px;
+}
+.for_icons .icon .phone{
+    width: 70px;
+    height: 70px;
+    background-color: #EEF2FF;
+    color: #234BDA;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 28px;
+    text-align: center;
+    line-height: 70px;
+}
+.for_icons .text a{
+    color: #7A7A7A;
+font-size: 17px;
+font-style: normal;
+font-weight: 400;
+line-height: 190%; /* 32.3px */
+}
+#input .for_form{
+    width: 58%;
+}
+#input .for_form input{
+    padding: 16px 54px 16px 32px;
+    color: #7A7A7A;
+font-size: 17px;
+font-weight: 300;
+line-height: 190%; /* 32.3px */
+border-radius: 12px;
+border: 0.5px solid #7A7A7A;
+margin-right: 15px;
+margin-bottom: 16px;
+}
+#input .for_form textarea{
+    padding-top: 16px;
+    padding-left: 32px;
+    color: #7A7A7A;
+font-family: Poppins;
+font-size: 17px;
+font-weight: 300;
+line-height: 190%; /* 32.3px */
+border-radius: 12px;
+border: 0.5px solid #7A7A7A;
+display: block;
+}
+#input .for_form button{
+    color: #FFF;
+text-align: center;
+font-size: 18px;
+font-weight: 500;
+line-height: 180%; /* 32.4px */
+padding: 11px 45px;
+border-radius: 12px;
+background: #FC0;
+border: none;
+margin-top: 21px;
+}
+/* FORM ENDS HERE */
+
+/* FOOTER STARTS HERE */
+footer{
+    padding: 70px 0 85px 0;
+    background-image: url(./Images/footer.png);
+    background-size: cover;
+    background-position: center;
+}
+footer .call{
+    width: 30%;
+    margin-top: 20px;
+}
+footer .call p{
+    color: #BBB9B9;
+font-size: 18px;
+font-weight: 400;
+line-height: 180%; /* 32.4px */
+margin-top: 182px;
+margin-bottom: 4px;
+}
+footer .call a{
+    color: #FFF;
+font-size: 20px;
+font-weight: 500;
+line-height: 180%; /* 36px */
+}
+footer .content{
+    width: 40%;
+}
+footer .content h1{
+    color: #FFF;
+font-size: 36px;
+font-weight: 700;
+line-height: 200%; /* 72px */
+}
+footer .content .p1{
+    color: #BBB9B9;
+font-size: 16px;
+font-weight: 400;
+line-height: 180%; /* 28.8px */
+}
+footer .content .p2{
+    color: #BBB9B9;
+font-size: 18px;
+font-weight: 400;
+line-height: 180%; /* 32.4px */
+margin-top: 94px;
+}
+footer .content a{
+    color: #FFF;
+font-size: 20px;
+font-weight: 500;
+line-height: 180%; /* 36px */
+}
+footer .socials{
+    width: 30%;
+}
+footer .socials .button{
+    display: inline-block;
+    background-color: var(--secondarycolor);
+    color: white;
+    border-radius: 16px;
+    padding: 15px 32px;
+    margin-top: 40px;
+    margin-left: 80px;
+}
+footer .socials .button span{
+    display: inline-block;
+    margin-left: 11px;
+}
+footer .socials .row p{
+    color: #FFF;
+font-size: 18px;
+font-weight: 400;
+line-height: 180%; /* 32.4px */
+}
+footer .socials ul li{
+    display: inline-block;
+}
+footer .socials .icons{
+    margin-top: 139px;
+}
+footer .socials .icons p{
+    margin-right: 24px;
+}
+footer .socials .icons ul li a{
+    width: 48px;
+    height: 48px;
+    background-color: #484848;
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+}
+/* FOOTER ENDS HERE */
